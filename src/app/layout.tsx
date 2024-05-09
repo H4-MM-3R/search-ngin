@@ -5,63 +5,132 @@ import "./globals.css";
 import { Icons } from "@/components/Icons";
 import SearchBar from "@/components/SearchBar";
 import { Suspense } from "react";
+import { ScanSearch } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="isolate min-h-screen relative overflow-hidden border-b border-gray-200 bg-white">
-          <svg
-            className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
-                width={200}
-                height={200}
-                x="50%"
-                y={-1}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <rect
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-              fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
-            />
-          </svg>
-          <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex gap-16 lg:px-8 lg:py-24">
-            <div className="h-full w-full flex flex-col items-center gap-4">
-              <Icons.Sparkles className="w-16 h-16" />
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <div className="isolate min-h-screen relative overflow-hidden border-b border-gray-200 bg-[#0a0a0a]">
+                    <svg
+                        className="fixed inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(40%_40%_at_top_right,white,transparent)]"
+                        aria-hidden="true"
+                    >
+                        <defs>
+                            <pattern
+                                id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+                                width={100}
+                                height={100}
+                                x="50%"
+                                y={-1}
+                                patternUnits="userSpaceOnUse"
+                            >
+                                <path d="M.5 200V.5H200" fill="none" />
+                            </pattern>
+                        </defs>
+                        <rect
+                            width="100%"
+                            height="100%"
+                            strokeWidth={0}
+                            fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
+                        />
+                    </svg>
+                    <svg
+                        className="fixed inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(40%_40%_at_top_left,white,transparent)]"
+                        aria-hidden="true"
+                    >
+                        <defs>
+                            <pattern
+                                id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+                                width={100}
+                                height={100}
+                                x="50%"
+                                y={-1}
+                                patternUnits="userSpaceOnUse"
+                            >
+                                <path d="M.5 200V.5H200" fill="none" />
+                            </pattern>
+                        </defs>
+                        <rect
+                            width="100%"
+                            height="100%"
+                            strokeWidth={0}
+                            fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
+                        />
+                    </svg>
+                    <svg
+                        className="fixed inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(40%_40%_at_bottom_right,white,transparent)]"
+                        aria-hidden="true"
+                    >
+                        <defs>
+                            <pattern
+                                id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+                                width={100}
+                                height={100}
+                                x="50%"
+                                y={-1}
+                                patternUnits="userSpaceOnUse"
+                            >
+                                <path d="M.5 200V.5H200" fill="none" />
+                            </pattern>
+                        </defs>
+                        <rect
+                            width="100%"
+                            height="100%"
+                            strokeWidth={0}
+                            fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
+                        />
+                    </svg>
+                    <svg
+                        className="fixed inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(40%_40%_at_bottom_left,white,transparent)]"
+                        aria-hidden="true"
+                    >
+                        <defs>
+                            <pattern
+                                id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+                                width={100}
+                                height={100}
+                                x="50%"
+                                y={-1}
+                                patternUnits="userSpaceOnUse"
+                            >
+                                <path d="M.5 200V.5H200" fill="none" />
+                            </pattern>
+                        </defs>
+                        <rect
+                            width="100%"
+                            height="100%"
+                            strokeWidth={0}
+                            fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
+                        />
+                    </svg>
+                    <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex gap-16 lg:px-8 lg:py-24">
+                        <div className="h-full w-full flex flex-col items-center gap-4">
+                            <h1 className="tracking-tight text-4xl sm:text-6xl font-bold text-white flex gap-8">
+                                Search-Ngin
+                                <ScanSearch className="w-16 h-16 text-white" />
+                            </h1>
 
-              <h1 className="tracking-tight text-4xl sm:text-6xl font-bold text-black">
-                MagicSearch
-              </h1>
-
-              <p className="max-w-xl text-center text-lg text-slate-700">
-                A beautifully designed, hybrid search engine that enhances
-                search accuracy by querying semantically related results.
-              </p>
-              <div className="mx-auto mt-16 w-full max-w-2xl flex flex-col">
-                <Suspense>
-                  <SearchBar />
-                </Suspense>
-                {children}
-              </div>
-            </div>
-          </div>
-        </div>
-      </body>
-    </html>
-  );
+                            <p className="max-w-xl text-center text-lg text-white/65">
+                                A hybrid search engine that enhances search accuracy by querying
+                                semantically related results.
+                            </p>
+                            <div className="mx-auto mt-16 w-full max-w-2xl flex flex-col">
+                                <Suspense>
+                                    <SearchBar />
+                                </Suspense>
+                                {children}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </html>
+    );
 }

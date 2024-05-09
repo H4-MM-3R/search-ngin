@@ -21,8 +21,8 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="relative w-full h-14 flex flex-col bg-white">
-      <div className="relative h-14 z-10 rounded-md">
+    <div className="relative w-full h-14 flex flex-col bg-[#0a0a0a]">
+      <div className="relative h-14 z-10 rounded-md flex">
         <Input
           disabled={isSearching}
           value={query}
@@ -38,14 +38,14 @@ const SearchBar = () => {
             }
           }}
           ref={inputRef}
-          className="absolute inset-0 h-full"
+          className="relative h-full"
           placeholder="Search"
         />
         <Button
           disabled={isSearching}
           size="sm"
           onClick={search}
-          className="absolute inset-y-0 h-full right-0 rounded-l-none"
+          className="relative h-full right-0 rounded-l-none border-slate-50 border border-l-0"
         >
           {isSearching ? (
             <Loader className="w-4 h-4 animate-spin" />

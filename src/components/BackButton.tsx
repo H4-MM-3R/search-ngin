@@ -9,10 +9,10 @@ const BackButton = () => {
   return (
     <Button
       onClick={() => router.back()}
-      className="flex gap-2 items-center text-sm pb-2"
+      className="flex gap-2 items-center text-sm pb-2 text-white bg-black"
       variant="secondary"
     >
-      <ChevronLeft className="h-4 w-4" />
+      <ChevronLeft className="h-4 w-4 text-white" />
       Back
     </Button>
   );

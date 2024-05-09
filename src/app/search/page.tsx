@@ -72,7 +72,7 @@ export default async function page({ searchParams }: PageProps) {
   return (
     <>
       <hr />
-      <ul className="py-4 divide-y divide-zinc-100 bg-white shadow-md rounded-b-md">
+      <ul className="py-4 bg-white/15 rounded-b-md">
         {products.slice(0, 3).map((product) => (
           <Link key={product.id} href={`/products/${product.id}`}>
             <li className="mx-auto py-4 px-8 flex space-x-4">
@@ -82,19 +82,20 @@ export default async function page({ searchParams }: PageProps) {
                   fill
                   alt="product-image"
                   src={`/${product.imageId}`}
+                  className="h-full w-full object-cover object-center rounded-lg"
                 />
               </div>
 
               <div className="w-full flex-1 space-y-2 py-1">
-                <h1 className="text-lg font-medium text-gray-900">
+                <h1 className="text-lg font-medium text-white/80">
                   {product.name}
                 </h1>
 
-                <p className="prose prose-sm text-gray-500 line-clamp-3">
+                <p className="prose prose-sm text-white/50 line-clamp-3">
                   {product.description}
                 </p>
 
-                <p className="text-base font-medium text-gray-900">
+                <p className="text-base font-medium text-white">
                   ${product.price.toFixed(2)}
                 </p>
               </div>

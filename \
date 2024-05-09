@@ -55,14 +55,14 @@ const Page = async ({ params }: PageProps) => {
           </div>
 
           <div className="mt-4 space-y-6">
-            <p className="text-base max-w-prose text-white/75">
+            <p className="text-base max-w-prose text-white/70">
               {product.description}
             </p>
           </div>
 
           <div className="mt-6 flex items-center">
             <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-            <p className="ml-2 text-sm text-white/50">
+            <p className="ml-2 text-sm text-muted-foreground">
               Eligible for express delivery
             </p>
           </div>
@@ -70,12 +70,12 @@ const Page = async ({ params }: PageProps) => {
       </div>
 
       <div className="mt-6">
-        <Button className="w-full mt-10 bg-black">Add to cart</Button>
+        <Button className="w-full mt-10">Add to cart</Button>
 
         <div className="mt-6 text-center">
           <div className="inline-flex text-sm text-medium">
             <Shield className="mr-2 h-5 w-5 flex-shrink-0 text-gray-400" />
-            <span className="text-white/50 hover:text-gray-700">
+            <span className="text-muted-foreground hover:text-gray-700">
               30 Day Return Guarantee
             </span>
           </div>

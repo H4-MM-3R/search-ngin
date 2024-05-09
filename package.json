@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "drizzle:seed": "pnpm tsx ./src/db/seed.ts"
+    "seed": "pnpm tsx ./src/db/seed.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
@@ -21,7 +21,6 @@
     "drizzle-orm": "^0.30.10",
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
-    "openai": "^4.40.2",
     "pg": "^8.11.5",
     "react": "^18",
     "react-dom": "^18",
